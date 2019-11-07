@@ -36,7 +36,6 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
 end
 
 def all_winter_holiday_supplies(holiday_hash)
-  binding.pry
   holiday_hash[:winter].values.flatten
 end
 
@@ -48,7 +47,12 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
+  holiday_hash.each do |season, season_holidays|
+    puts "#{season.to_s.capitalize}:"
+    season_holidays.each do |holiday, supply_array|
+      puts "  "
+    end
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
