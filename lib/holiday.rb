@@ -41,7 +41,7 @@ end
 
 def cap(item)
   cap_array = item.to_s.split("_")
-  
+  cap_string = cap_array.each {|word| word.capitalize!}.join(" ")
 end
 
 def all_supplies_in_holidays(holiday_hash)
